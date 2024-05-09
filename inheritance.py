@@ -1,21 +1,29 @@
-class Vehicle:
-    def gen_use(self):
-        print("Vehicle")
+class vehicle:
+    def uses(self):
+        print("Transportation")
         
-class Car(Vehicle):
+class car(vehicle):
     def __init__(self):
-        self.a=30
-        self.b=40
-    def sp_use(self):
         print("car")
-
-class motor(Vehicle):
-    def __init__(self):
-        self.a=90
-        self.b=80
-    def sp_use(self):
-        print("motor")
+        self.wheels=4
+        self.roof=True
+    def spUses(self):
+        print("Vaccation")
         
-c= Car()
-c.gen_use()
-c.sp_use()
+class bike(vehicle):
+    def __init__(self):
+        print("bike")
+        self.wheels=2
+        self.roof=False
+        
+c = car() #constructor called
+c.uses()
+c.spUses()
+
+
+# isinstance and issubclass
+
+b = bike()
+print(isinstance(b, bike))
+print(issubclass(car, vehicle))
+           
